@@ -5,14 +5,14 @@
 ## Usage
 
 ```js
-import { toKeypath } from 'to-keypath';
+import { toKeypath } from "to-keypath";
 
-let path = ['a', 'b', 'c'];
+let path = ["a", "b", "c"];
 let keypath = toKeypath(path); // 'a.b.c'
 
 // valid integers are represented in brackets
 // invalid javascript identifiers are wrapped in brackets & double-quotes
-path = ['a', '0', '.c'];
+path = ["a", "0", ".c"];
 keypath = toKeypath(path); // 'a[0].["."].c'
 ```
 
@@ -35,7 +35,7 @@ It's probably useless to you _unless_ your program _outputs_ the resulting
 string (my use case) _or_ you are consuming an ill-conceived API which a string
 _only_. If the latter, please read the following warning:
 
-> ![WARNING]
+> [!WARNING]
 >
 > If you're trying to pass the result of `to-keypath`'s value to another API,
 > understand that this package is _not_ meant to be used as such a workaround;
