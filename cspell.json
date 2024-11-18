@@ -13,7 +13,7 @@
     "cbor",
     "commitlint",
     "filesystems",
-    "impvol",
+    "to-keypath",
     "knip",
     "markdownlint",
     "memfs",
