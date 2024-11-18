@@ -4,5 +4,6 @@
     ".": {
       "release-type": "node"
     }
-  }
+  },
+  "bootstrap-sha": "2bc3f651a87b3a952885af75686825033f2db2a7"
 }
