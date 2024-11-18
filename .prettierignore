@@ -1,0 +1,5 @@
+.husky/
+dist/
+.tshy/
+package-lock.json
+CHANGELOG.md

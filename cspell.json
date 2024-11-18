@@ -1,0 +1,25 @@
+{
+  "dictionaries": ["typescript"],
+  "ignorePaths": [
+    ".github",
+    "CHANGELOG.md",
+    "dist",
+    "node_modules",
+    "package-lock.json",
+    ".release-it.json"
+  ],
+  "words": [
+    "boneskull",
+    "cbor",
+    "commitlint",
+    "filesystems",
+    "impvol",
+    "knip",
+    "markdownlint",
+    "memfs",
+    "packagejson",
+    "tsdoc",
+    "tseslint",
+    "tshy"
+  ]
+}
