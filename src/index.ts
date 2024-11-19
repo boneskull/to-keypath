@@ -3,7 +3,8 @@
  *
  * @packageDocumentation
  */
-import isIdentifier from 'is-identifier';
+
+import {identifierRegex} from './identifier-regex.js';
 
 /**
  * Matches a string that can be displayed as an integer when converted to a
@@ -28,6 +29,8 @@ const WRAPPED_QUOTE_REGEXP = /^["'](?<content>.+)["']$/;
  * @returns `true` if `key` can be coerced to an integer
  */
 const isIntegerLike = (key: string): boolean => INT_STRING_REGEXP.test(key);
+
+const isIdentifier = (value: string) => identifierRegex.test(value);
 
 /**
  * Converts a {@link Keypath} to a string using dots or braces as appropriate
