@@ -5,14 +5,14 @@
 ## Usage
 
 ```js
-import { toKeypath } from "to-keypath";
+import {toKeypath} from 'to-keypath';
 
-let path = ["a", "b", "c"];
+let path = ['a', 'b', 'c'];
 let keypath = toKeypath(path); // 'a.b.c'
 
 // valid integers are represented in brackets
 // invalid javascript identifiers are wrapped in brackets & double-quotes
-path = ["a", "0", ".c"];
+path = ['a', '0', '.c'];
 keypath = toKeypath(path); // 'a[0].["."].c'
 ```
 

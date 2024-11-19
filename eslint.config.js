@@ -47,14 +47,14 @@ export default tseslint.config(
 
       '@stylistic/padding-line-between-statements': [
         'error',
-        { blankLine: 'always', next: 'export', prev: '*' },
+        {blankLine: 'always', next: 'export', prev: '*'},
       ],
 
       '@stylistic/semi': ['error', 'always'],
 
       '@typescript-eslint/consistent-type-exports': [
         'error',
-        { fixMixedExportsWithInlineTypeSpecifier: true },
+        {fixMixedExportsWithInlineTypeSpecifier: true},
       ],
 
       '@typescript-eslint/consistent-type-imports': [
