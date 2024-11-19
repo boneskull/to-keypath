@@ -10,16 +10,18 @@
   ],
   "words": [
     "boneskull",
-    "cbor",
     "commitlint",
-    "filesystems",
     "to-keypath",
     "knip",
     "markdownlint",
-    "memfs",
     "packagejson",
     "tsdoc",
     "tseslint",
-    "tshy"
+    "tshy",
+    "nodenext",
+    "keypath",
+    "keypaths",
+    "Sindre",
+    "Sorhus"
   ]
 }
