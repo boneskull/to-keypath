@@ -11,7 +11,7 @@ let path = ['a', 'b', 'c'];
 let keypath = toKeypath(path); // 'a.b.c'
 
 // valid integers are represented in brackets
-// invalid javascript identifiers are wrapped in brackets & double-quotes
+// strings which cannot be used w/ dot notation are wrapped in brackets & double-quotes
 path = ['a', '0', '.c'];
 keypath = toKeypath(path); // 'a[0].["."].c'
 ```
