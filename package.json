@@ -31,6 +31,12 @@
     }
   },
   "types": "./dist/commonjs/index.d.ts",
+  "files": [
+    "CHANGELOG.md",
+    "dist",
+    "src",
+    "!*.tsbuildinfo"
+  ],
   "keywords": [
     "string",
     "object",
