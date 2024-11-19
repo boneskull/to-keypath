@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
-import { describe, it } from 'node:test';
+import {describe, it} from 'node:test';
 
-import { toKeypath } from '../src/index.js';
+import {toKeypath} from '../src/index.js';
 
 describe('midnight-smoker', () => {
   describe('util', () => {
@@ -19,7 +19,6 @@ describe('midnight-smoker', () => {
         describe('when the keys are numbers but invalid integers', () => {
           const path = ['some', 'object', '01', 'key'];
 
-          // eslint-disable-next-line mocha/no-skipped-tests
           it('should format the keypath using brackets', () => {
             const actual = toKeypath(path);
             assert.equal(actual, 'some.object["01"].key');

@@ -10,7 +10,7 @@
 
 // https://262.ecma-international.org/14.0/#sec-keywords-and-reserved-words
 // 14 is ES2023
-export const identifiers = [
+const identifiers = [
   // Keywords
   'await',
   'break',
@@ -65,7 +65,7 @@ export const identifiers = [
 ] as const;
 
 // https://262.ecma-international.org/14.0/#sec-value-properties-of-the-global-object
-export const globalProperties = [
+const globalProperties = [
   'globalThis',
   'Infinity',
   'NaN',
