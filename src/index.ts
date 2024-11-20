@@ -4,8 +4,6 @@
  * @packageDocumentation
  */
 
-import {identifierRegex} from './identifier-regex.js';
-
 /**
  * Matches a string that can be displayed as an integer when converted to a
  * string (via `toString()`). This would represent the index of an array.
@@ -15,6 +13,11 @@ import {identifierRegex} from './identifier-regex.js';
  * but it's an integer.
  */
 const INT_STRING_REGEXP = /^(?:0|[1-9][0-9]*)$/;
+
+/**
+ * Anything matching this will need to be in
+ */
+const DOT_NOTATION_ALLOWED = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/;
 
 /**
  * Matches a string wrapped in single or double quotes
@@ -29,8 +32,6 @@ const WRAPPED_QUOTE_REGEXP = /^["'](?<content>.+)["']$/;
  * @returns `true` if `key` can be coerced to an integer
  */
 const isIntegerLike = (key: string): boolean => INT_STRING_REGEXP.test(key);
-
-const isIdentifier = (value: string) => identifierRegex.test(value);
 
 /**
  * Converts a {@link Keypath} to a string using dots or braces as appropriate
@@ -51,6 +52,8 @@ export const toKeypath = <const T extends readonly string[]>(
     if (isIntegerLike(key)) {
       return `${output}[${key}]`;
     }
-    return isIdentifier(key) ? `${output}.${key}` : `${output}["${key}"]`;
+    return DOT_NOTATION_ALLOWED.test(key)
+      ? `${output}.${key}`
+      : `${output}["${key}"]`;
   });
 };

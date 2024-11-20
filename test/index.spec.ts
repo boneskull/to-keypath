@@ -5,7 +5,7 @@ import {toKeypath} from '../src/index.js';
 
 describe('midnight-smoker', () => {
   describe('util', () => {
-    describe('formatKeypath', () => {
+    describe('toKeypath()', () => {
       describe('when path contains integer-like keys', () => {
         const path = ['some', 'object', '0', 'key'];
 
@@ -82,7 +82,7 @@ describe('midnight-smoker', () => {
         describe('when path contains a key wrapped in double-quotes', () => {
           const path = ['some', 'object', '"key"'];
 
-          it('should use dot notation', () => {
+          it('should return a string in dot notation', () => {
             const actual = toKeypath(path);
             assert.equal(actual, 'some.object.key');
           });
@@ -91,10 +91,19 @@ describe('midnight-smoker', () => {
         describe('when path contains a key wrapped in single-quotes', () => {
           const path = ['some', 'object', "'key'"];
 
-          it('should use dot notation', () => {
+          it('should return a string in dot notation', () => {
             const actual = toKeypath(path);
             assert.equal(actual, 'some.object.key');
           });
+        });
+      });
+
+      describe('when path contains reserved keywords', () => {
+        const path = ['import', 'default', 'constructor'];
+
+        it('should return a string in dot notation', () => {
+          const actual = toKeypath(path);
+          assert.equal(actual, 'import.default.constructor');
         });
       });
 
