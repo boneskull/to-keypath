@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/boneskull/to-keypath/compare/to-keypath-v0.1.1...to-keypath-v0.1.2) (2024-11-20)
+
+
+### Bug Fixes
+
+* do not ban all reserved keywords ([ef16cc6](https://github.com/boneskull/to-keypath/commit/ef16cc62f21dea385effd796650579f0bc68487d))
+
 ## [0.1.1](https://github.com/boneskull/to-keypath/compare/to-keypath-v0.1.0...to-keypath-v0.1.1) (2024-11-20)
 
 
