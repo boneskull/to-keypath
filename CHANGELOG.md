@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/boneskull/to-keypath/compare/to-keypath-v0.1.0...to-keypath-v0.1.1) (2024-11-20)
+
+
+### Bug Fixes
+
+* add missing files ([159d330](https://github.com/boneskull/to-keypath/commit/159d330e6c5ad089c142fe045f1b78d8a73416ed))
+
 ## 0.1.0 (2024-11-19)
 
 
