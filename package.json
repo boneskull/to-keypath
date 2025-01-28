@@ -70,10 +70,10 @@
   "devDependencies": {
     "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
-    "@eslint/js": "9.18.0",
+    "@eslint/js": "9.19.0",
     "@stylistic/eslint-plugin": "2.13.0",
     "cspell": "8.17.2",
-    "eslint": "9.18.0",
+    "eslint": "9.19.0",
     "eslint-plugin-perfectionist": "4.7.0",
     "husky": "9.1.7",
     "knip": "5.43.3",
