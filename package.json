@@ -72,7 +72,7 @@
     "@commitlint/config-conventional": "19.7.1",
     "@eslint/js": "9.21.0",
     "@stylistic/eslint-plugin": "4.0.1",
-    "cspell": "8.17.4",
+    "cspell": "8.17.5",
     "eslint": "9.21.0",
     "eslint-plugin-perfectionist": "4.9.0",
     "husky": "9.1.7",
