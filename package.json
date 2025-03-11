@@ -74,7 +74,7 @@
     "@stylistic/eslint-plugin": "4.2.0",
     "cspell": "8.17.5",
     "eslint": "9.22.0",
-    "eslint-plugin-perfectionist": "4.9.0",
+    "eslint-plugin-perfectionist": "4.10.0",
     "husky": "9.1.7",
     "knip": "5.45.0",
     "lint-staged": "15.4.3",
