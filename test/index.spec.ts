@@ -1,4 +1,4 @@
-import assert from 'node:assert/strict';
+import {expect} from 'bupkis';
 import {describe, it} from 'node:test';
 
 import {toKeypath} from '../src/index.js';
@@ -11,9 +11,9 @@ describe('midnight-smoker', () => {
 
         it('should format the keypath using brackets', () => {
           let actual = toKeypath(path);
-          assert.equal(actual, 'some.object[0].key');
+          expect(actual, 'to be', 'some.object[0].key');
           actual = toKeypath(['a', '0', '.c']);
-          assert.equal(actual, 'a[0][".c"]');
+          expect(actual, 'to be', 'a[0][".c"]');
         });
 
         describe('when the keys are numbers but invalid integers', () => {
@@ -21,7 +21,7 @@ describe('midnight-smoker', () => {
 
           it('should format the keypath using brackets', () => {
             const actual = toKeypath(path);
-            assert.equal(actual, 'some.object["01"].key');
+            expect(actual, 'to be', 'some.object["01"].key');
           });
         });
 
@@ -30,7 +30,7 @@ describe('midnight-smoker', () => {
 
           it('should format the keypath using brackets', () => {
             const actual = toKeypath(path);
-            assert.equal(actual, 'some.object[0].key');
+            expect(actual, 'to be', 'some.object[0].key');
           });
         });
 
@@ -39,7 +39,7 @@ describe('midnight-smoker', () => {
 
           it('should format the keypath using brackets', () => {
             const actual = toKeypath(path);
-            assert.equal(actual, 'some.object[0].key');
+            expect(actual, 'to be', 'some.object[0].key');
           });
         });
       });
@@ -49,7 +49,7 @@ describe('midnight-smoker', () => {
 
         it('should format the keypath using brackets & double-quotes', () => {
           const actual = toKeypath(path);
-          assert.equal(actual, 'some.object["key-with-dash"]');
+          expect(actual, 'to be', 'some.object["key-with-dash"]');
         });
 
         describe('when path contains a key wrapped in double-quotes', () => {
@@ -57,7 +57,7 @@ describe('midnight-smoker', () => {
 
           it('should format the keypath using brackets & double-quotes', () => {
             const actual = toKeypath(path);
-            assert.equal(actual, 'some.object["key-with-dash"]');
+            expect(actual, 'to be', 'some.object["key-with-dash"]');
           });
         });
 
@@ -66,7 +66,7 @@ describe('midnight-smoker', () => {
 
           it('should format the keypath using brackets & double-quotes', () => {
             const actual = toKeypath(path);
-            assert.equal(actual, 'some.object["key-with-dash"]');
+            expect(actual, 'to be', 'some.object["key-with-dash"]');
           });
         });
       });
@@ -76,7 +76,7 @@ describe('midnight-smoker', () => {
 
         it('should format the keypath using dots', () => {
           const actual = toKeypath(path);
-          assert.equal(actual, 'some.object.key');
+          expect(actual, 'to be', 'some.object.key');
         });
 
         describe('when path contains a key wrapped in double-quotes', () => {
@@ -84,7 +84,7 @@ describe('midnight-smoker', () => {
 
           it('should return a string in dot notation', () => {
             const actual = toKeypath(path);
-            assert.equal(actual, 'some.object.key');
+            expect(actual, 'to be', 'some.object.key');
           });
         });
 
@@ -93,7 +93,7 @@ describe('midnight-smoker', () => {
 
           it('should return a string in dot notation', () => {
             const actual = toKeypath(path);
-            assert.equal(actual, 'some.object.key');
+            expect(actual, 'to be', 'some.object.key');
           });
         });
       });
@@ -103,7 +103,7 @@ describe('midnight-smoker', () => {
 
         it('should return a string in dot notation', () => {
           const actual = toKeypath(path);
-          assert.equal(actual, 'import.default.constructor');
+          expect(actual, 'to be', 'import.default.constructor');
         });
       });
 
@@ -112,7 +112,7 @@ describe('midnight-smoker', () => {
 
         it('should return an empty string', () => {
           const actual = toKeypath(path);
-          assert.equal(actual, '');
+          expect(actual, 'to be', '');
         });
       });
     });
